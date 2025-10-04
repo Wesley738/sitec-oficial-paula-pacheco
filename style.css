@@ -1,0 +1,43 @@
+body {
+    width: 95%;
+    margin: auto;
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400; /* peso padrão (regular) */
+}
+
+.menu {
+    width: 95%;
+    margin: auto auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.4em;
+    list-style: none;
+    margin-top: 24px;
+    font-size: 1.6em;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #853616;
+    letter-spacing: 1px;
+    padding: 2px 2px 6px;
+}
+
+.menu a:hover {
+    border-bottom: 1px solid #853616;
+}
+
+#btn-destaque {
+    padding: 1rem;
+    background-color: #853616;
+    color: white;
+}
+
+#btn-destaque:hover {
+    outline: 1px solid #853616;
+    background-color: white;
+    color: #853616;
+    border: none;
+}
