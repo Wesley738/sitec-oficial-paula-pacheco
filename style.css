@@ -1,3 +1,8 @@
+:root {
+    --font-all-color: #63463b;
+    --color-theme-main: #853616;
+}
+
 body {
     width: 95%;
     margin: auto;
@@ -16,28 +21,118 @@ body {
     list-style: none;
     margin-top: 24px;
     font-size: 1.6em;
+    padding: 0;
+}
+
+@media (max-width: 800px) {
+    .menu {
+        font-size: 1.4em;
+        gap: 1.5em;
+    }
 }
 
 .menu a {
     text-decoration: none;
-    color: #853616;
+    color: var(--color-theme-main);
     letter-spacing: 1px;
     padding: 2px 2px 6px;
 }
 
 .menu a:hover {
-    border-bottom: 1px solid #853616;
+    border-bottom: 1px solid var(--color-theme-main);
 }
 
 #btn-destaque {
-    padding: 1rem;
-    background-color: #853616;
+    padding: 0.9em;
+    background-color: var(--color-theme-main);
     color: white;
 }
 
 #btn-destaque:hover {
-    outline: 1px solid #853616;
+    outline: 1px solid var(--color-theme-main);
     background-color: white;
-    color: #853616;
+    color: var(--color-theme-main);
     border: none;
+}
+
+
+.cabecalho-principal {
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 800px) {
+    .cabecalho-principal {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 450px;
+    margin: 60px 50px 1px;
+}
+
+@media (max-width: 800px) {
+    .logo {
+        margin-top: 40px;
+    }
+}
+
+.saudacao {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8em;
+    color: var(--font-all-color);
+    margin-bottom: 0;
+}
+
+.slogan {
+    font-size: 2.5em;
+    width: 80%;
+    text-align: center;
+    font-style: italic;
+}
+
+.foto-doutora {
+    width: 500px;
+    margin-right: 0;
+}
+
+@media (max-width: 800px) {
+    .foto-doutora {
+        width: 60%;
+        margin: 30px auto 0;
+    }
+}
+
+.btn-agendar_sessao {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: var(--color-theme-main);
+    color: white;
+    font-size: 1.6em;
+    text-decoration: none;
+}
+
+.btn-agendar_sessao:hover {
+    background-color: white;
+    outline: 1px solid var(--color-theme-main);
+    color: var(--color-theme-main);
+}
+
+.btn-whatsapp {
+    border-radius: 50%;
+    width: 50px;
+    position: fixed;
+    bottom: 10px; right: 15px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
