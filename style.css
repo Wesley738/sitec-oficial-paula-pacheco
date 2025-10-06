@@ -8,12 +8,18 @@ html {
 }
 
 body {
-    width: 100%;
-    overflow-x: hidden;
+    width: 86%;
     margin: auto;
+    overflow-x: hidden;
     font-size: 62.5%;
     font-family: 'Raleway', sans-serif;
     font-weight: 400; /* peso padrão (regular) */
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 100%;
+    }
 }
 
 .menu {
@@ -40,7 +46,7 @@ body {
 @media (max-width: 500px) {
     .menu {
         font-size: 1em;
-        gap: 0.7em;
+        gap: 1.5em;
         font-weight: 600;
         margin-left: auto;
         margin-right: auto;
@@ -97,7 +103,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 30px;
 }
 
 .logo {
@@ -140,19 +145,18 @@ body {
 
     .slogan {
         font-size: 1.7em;
-        width: 60%;
+        width: 70%;
     }
 }
 
 .foto-doutora {
     width: 500px;
-    margin-right: 40px;
 }
 
 @media (max-width: 500px) {
     .foto-doutora {
         width: 60%;
-        margin: 30px 0;
+        margin: 30px 0 60px;
     }
 }
 
@@ -185,4 +189,34 @@ body {
     position: fixed;
     bottom: 10px; right: 15px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.frase {
+    width: 70%;
+    text-align: center;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 600;
+    margin: 5em auto 1.6em;
+    color: #853516cc
+}
+
+.aplicacao-frase {
+    width: 90%;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0 auto 3em;
+}
+
+@media (max-width: 500px) {
+    .frase {
+        width: 90%;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        font-size: 1.9em;
+    }
+
+    .aplicacao-frase {
+        font-size: 2.2em;
+    }
 }
