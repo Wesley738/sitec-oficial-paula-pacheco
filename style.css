@@ -24,13 +24,12 @@ body {
 
 .menu {
     width: 95%;
-    margin: auto auto 20px;
+    margin: 24px auto 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3.4em;
     list-style: none;
-    margin-top: 24px;
     font-size: 1.6em;
     padding: 0;
     flex-wrap: wrap;
@@ -81,7 +80,7 @@ body {
 
 .cabecalho-principal {
     display: flex;
-    gap: 100px;
+    gap: 90px;
     justify-content: space-between;
     margin-bottom: 40px;
 }
@@ -107,7 +106,7 @@ body {
 
 .logo {
     width: 450px;
-    margin: 60px 50px 1px;
+    margin: 60px 10px 1px;
 }
 
 @media (max-width: 800px) {
@@ -150,7 +149,8 @@ body {
 }
 
 .foto-doutora {
-    width: 500px;
+    width: 380px;
+    border: 8px outset var(--color-theme-main)
 }
 
 @media (max-width: 500px) {
@@ -185,10 +185,14 @@ body {
 
 .btn-whatsapp {
     border-radius: 50%;
-    width: 50px;
+    width: 40px;
     position: fixed;
     bottom: 10px; right: 15px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+a .btn-whatsapp:hover {
+    box-shadow: 1px 1px 9px 1px rgba(46, 209, 20, 0.9);
 }
 
 .frase {
