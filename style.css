@@ -157,6 +157,7 @@ body {
     .foto-doutora {
         width: 60%;
         margin: 30px 0 60px;
+        border: 8px outset var(--color-theme-main)
     }
 }
 
@@ -164,7 +165,7 @@ body {
     .foto-doutora {
         width: 60%;
         margin: 20px auto 0;
-        border: 8px solid var(--color-theme-main);
+        border: 8px outset var(--color-theme-main);
     }
 }
 
