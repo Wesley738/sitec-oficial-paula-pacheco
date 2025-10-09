@@ -33,6 +33,7 @@ body {
     font-size: 1.6em;
     padding: 0;
     flex-wrap: wrap;
+    font-weight: 600;
 }
 
 @media (max-width: 800px) {
@@ -150,22 +151,23 @@ body {
 
 .foto-doutora {
     width: 380px;
-    border: 8px outset var(--color-theme-main)
+    border: 8px double var(--color-theme-main);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 500px) {
     .foto-doutora {
         width: 60%;
         margin: 30px 0 60px;
-        border: 8px outset var(--color-theme-main)
+        border: 8px double var(--color-theme-main)
     }
 }
 
 @media (max-width: 800px) {
     .foto-doutora {
-        width: 60%;
+        width: 60%; 
         margin: 20px auto 0;
-        border: 8px outset var(--color-theme-main);
+        border: 8px double var(--color-theme-main);
     }
 }
 
@@ -218,10 +220,22 @@ a .btn-whatsapp:hover {
         width: 90%;
         margin-top: 2em;
         margin-bottom: 1em;
-        font-size: 1.9em;
+        font-size: 1.5em;
     }
 
     .aplicacao-frase {
-        font-size: 2.2em;
+        font-size: 1.8em;
     }
+}
+
+.subtitulo-principal {
+    font-size: 3em;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-theme-main);
+    color: var(--color-theme-main);
+    width: 45%;
+    margin: auto;
+    padding-bottom: 0.3em;
 }
