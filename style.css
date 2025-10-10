@@ -1,5 +1,5 @@
 :root {
-    --font-all-color: #63463b;
+    --font-all-color: #2b1c17;
     --color-theme-main: #853616;
 }
 
@@ -14,6 +14,7 @@ body {
     font-size: 62.5%;
     font-family: 'Raleway', sans-serif;
     font-weight: 400; /* peso padrão (regular) */
+    color: var(--font-all-color);
 }
 
 @media (max-width: 500px) {
@@ -211,7 +212,7 @@ a .btn-whatsapp:hover {
 .aplicacao-frase {
     width: 90%;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0 auto 3em;
 }
 
@@ -228,14 +229,54 @@ a .btn-whatsapp:hover {
     }
 }
 
-.subtitulo-principal {
-    font-size: 3em;
+/* .subtitulo-principal {
+    font-size: 3.5em;
     text-align: center;
     text-transform: capitalize;
     font-weight: 600;
     border-bottom: 2px solid var(--color-theme-main);
     color: var(--color-theme-main);
     width: 45%;
-    margin: auto;
+    margin: auto auto 1em;
     padding-bottom: 0.3em;
 }
+
+.servicos {
+    display: flex;
+    gap: 4em;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 10em;
+    flex-direction: column;
+    width: 60%;
+    margin: auto auto 10em;
+}
+
+.servicos-plano {
+    min-width: 100%;
+    border-left: 6px double var(--color-theme-main);
+    padding: 1.3em 1.3em 1.3em 1.9em;
+    background-color: #f7f3f3;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.servicos-plano__titulo {
+    font-size: 2em;
+    margin: 0 0 0.7em;
+    color: var(--color-theme-main);
+}
+
+.servicos-plano__info {
+    font-size: 1.4em;
+    letter-spacing: 0.4pt;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.servicos-plano__list-info {
+    letter-spacing: 0.4pt;
+    font-size: 1.4em;
+    line-height: 1.7;
+    margin: 0;
+} 
+*/
