@@ -155,6 +155,11 @@ body {
     width: 380px;
     border: 8px double var(--color-theme-main);
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.foto-doutora:hover {
+    transform: scale(1.02);
 }
 
 @media (max-width: 500px) {
@@ -224,11 +229,83 @@ a .btn-whatsapp:hover {
         margin-bottom: 1em;
         font-size: 1.5em;
     }
-
+    
     .aplicacao-frase {
         font-size: 1.8em;
     }
 }
+
+.especialidades {
+    display: flex;
+    gap: 4em;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* height: 190px; */
+}
+
+/* @media (max-width: 500px) {
+    .especialidades {
+        flex-direction: column;
+    }    
+} */
+
+.especialidades-item {
+    background: linear-gradient(to right, #853616, #b44e22, #853616);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis: 250px;
+    max-height: 100%;
+    padding: 0.7em;
+    outline: 2px solid rgba(255, 255, 255);
+    outline-offset: -7px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+
+.especialidades-item:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
+.especialidades-item__texto {
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.especialidades-item img {
+    width: 70px;
+    padding: 12px;
+    transition: transform 0.3s ease;
+}
+
+.especialidades-item:hover img {
+    transform: scale(1.1);
+}
+
+/* 
+.especialidades-item:hover {
+    transform: translateY(-4px);
+}
+
+.especialidades-item img {
+    width: 70px;
+}
+
+.especialidades-item__texto {
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.7em;
+    margin-top: 0;
+} */
 
 .subtitulo-principal {
     font-size: 3.7em;
