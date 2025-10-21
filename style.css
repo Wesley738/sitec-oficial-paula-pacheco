@@ -185,6 +185,7 @@ body {
     color: white;
     font-size: 1.6em;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .btn-agendar_sessao:hover {
@@ -195,9 +196,9 @@ body {
 
 .btn-whatsapp {
     border-radius: 50%;
-    width: 40px;
+    width: 60px;
     position: fixed;
-    bottom: 10px; right: 15px;
+    bottom: 15px; right: 20px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -288,24 +289,6 @@ a .btn-whatsapp:hover {
 .especialidades-item:hover img {
     transform: scale(1.1);
 }
-
-/* 
-.especialidades-item:hover {
-    transform: translateY(-4px);
-}
-
-.especialidades-item img {
-    width: 70px;
-}
-
-.especialidades-item__texto {
-    width: 90%;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1.7em;
-    margin-top: 0;
-} */
 
 .subtitulo-principal {
     font-size: 3.7em;
@@ -407,4 +390,29 @@ a .btn-whatsapp:hover {
     background-color: white;
     color: var(--color-theme-main); 
     outline: 1px solid var(--color-theme-main);
+}
+
+.depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.9rem;
+    width: 95%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.depoimentos_item {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-basis: 300px;
+}
+
+.depoimentos_item img {
+    width: 90px;
+    border-radius: 50%;
 }
