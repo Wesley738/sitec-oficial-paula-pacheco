@@ -519,7 +519,7 @@ a .btn-whatsapp:hover {
     font-style: italic;
 } */
 
-.depoimentos {
+/* .depoimentos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -530,18 +530,14 @@ a .btn-whatsapp:hover {
 
 .depoimentos_item {
     background-color: #fff;
-    border: 2px solid #e8e5e3;
-    flex-basis: 280px;
+    border: 1px solid #e8e5e3;
+    flex-basis: 350px;
     padding: 1.8em 1.5em 2em;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
-    transition: border-color 0.3s ease;
-}
-
-.depoimentos_item:hover {
-    border-color: var(--color-theme-main);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08);
 }
 
 .depoimentos_item img {
@@ -568,4 +564,95 @@ a .btn-whatsapp:hover {
     color: #444;
     font-style: italic;
     width: 95%;
+} */
+
+
+.depoimentos_container {
+    background-color: #faf9f8;
+    padding: 4em 0 5em;
+    position: relative;
+}
+
+.depoimentos-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.depoimentos {
+    display: flex;
+    gap: 2em;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE e Edge */
+}
+
+.depoimentos::-webkit-scrollbar {
+    display: none; /* Chrome e Safari */
+}
+
+.depoimentos_item {
+    flex: 0 0 320px;
+    background-color: #fff;
+    border: 1px solid #e8e5e3;
+    border-radius: 10px;
+    padding: 1.8em 1.5em 2em;
+    text-align: center;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.depoimentos_item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-theme-main);
+    margin: 1em 0;
+}
+
+.depoimentos_item-nome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-theme-main);
+    margin: 0.4em 0 0.7em;
+}
+
+.depoimentos_item-texto {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    font-style: italic;
+}
+
+/* === Setas === */
+.seta {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #853616;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0.5em;
+    user-select: none;
+}
+
+.seta:hover {
+    color: #b44e22;
+}
+
+.seta:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.seta-esquerda {
+    margin-right: 1em;
+}
+
+.seta-direita {
+    margin-left: 1em;
 }
