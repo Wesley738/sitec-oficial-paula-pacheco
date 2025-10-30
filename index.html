@@ -24,21 +24,6 @@
     <title>Paula Pacheco | Psicanalista e Terapeuta</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- <script>
-        const container = document.querySelector('.depoimentos');
-        const setaEsquerda = document.querySelector('.seta-esquerda');
-        const setaDireita = document.querySelector('.seta-direita');
-
-        const scrollStep = 350; // distância de rolagem a cada clique
-
-        setaDireita.addEventListener('click', () => {
-        container.scrollBy({ left: scrollStep, behavior: 'smooth' });
-        });
-
-        setaEsquerda.addEventListener('click', () => {
-        container.scrollBy({ left: -scrollStep, behavior: 'smooth' });
-        });
-    </script> -->
 </head>
 <body>
     <nav>
@@ -112,69 +97,24 @@
                 <a href="#" class="btn-card">Contratar Plano</a>
             </div>
         </section>
-        <!-- <section class="depoimentos_container">
-            <h2 class="subtitulo-principal">Meus Clientes</h2>
-            <div class="depoimentos-wrapper">
-                <button class="seta seta-esquerda" aria-label="Anterior">‹</button>
-                <div class="depoimentos">
-                    <div class="depoimentos_item">
-                        <img src="imgs/pexels-jean-daniel-7960025.jpg" alt="Foto do Cliente">
-                        <p class="depoimentos_item-nome">Wesley Victor</p>
-                        <p class="depoimentos_item-texto">Eu participei da mentoria e me surpreendi bastante com o resultado. Essa mentoria foi de grande ajuda em diversos aspectos em minha vida, como: mental, profissional e familiar. Aspectos estes que busquei mudar com planos e mais planos que montava. Aprendi a ser paciente, disciplinado. 
-                        </p>
-                    </div>
-                    <div class="depoimentos_item">
-                        <img src="imgs/pexels-kaleef-lawal-1481864847-27897903.jpg" alt="Foto do Cliente">
-                        <p class="depoimentos_item-nome">Márcio Coimbra</p>
-                        <p class="depoimentos_item-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, tempore! Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
-                    <div class="depoimentos_item">
-                        <img src="imgs/pexels-kevinbidwell-2380794.jpg" alt="Foto do Cliente">
-                        <p class="depoimentos_item-nome">Márcio Coimbra</p>
-                        <p class="depoimentos_item-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, tempore! Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
-                    <div class="depoimentos_item">
-                        <img src="imgs/pexels-minan1398-977402.jpg" alt="Foto do Cliente">
-                        <p class="depoimentos_item-nome">Márcio Coimbra</p>
-                        <p class="depoimentos_item-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, tempore! Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
-                    <div class="depoimentos_item">
-                        <img src="imgs/pexels-mwabonje-1692433.jpg" alt="Foto do Cliente">
-                        <p class="depoimentos_item-nome">Márcio Coimbra</p>
-                        <p class="depoimentos_item-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, tempore! Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
-                    <div class="depoimentos_item">
-                        <img src="imgs/pexels-ron-jacob-leonador-1483832-2905820.jpg" alt="Foto do Cliente">
-                        <p class="depoimentos_item-nome">Márcio Coimbra</p>
-                        <p class="depoimentos_item-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, tempore! Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
-                    <div class="depoimentos_item">
-                        <img src="imgs/pexels-ron-jacob-leonador-1483832-2905820.jpg" alt="Foto do Cliente">
-                        <p class="depoimentos_item-nome">Márcio Coimbra</p>
-                        <p class="depoimentos_item-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, tempore! Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
-                    <div class="depoimentos_item">
-                        <img src="imgs/pexels-mwabonje-2033287.jpg" alt="Foto do Cliente">
-                        <p class="depoimentos_item-nome">Márcio Coimbra</p>
-                        <p class="depoimentos_item-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, tempore! Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
-                    <div class="depoimentos_item">
-                        <img src="imgs/pexels-minan1398-977402.jpg" alt="Foto do Cliente">
-                        <p class="depoimentos_item-nome">Márcio Coimbra</p>
-                        <p class="depoimentos_item-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, tempore! Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
+        <section class="depoimentos_container">
+            <h2 class="subtitulo-principal">Diversas Vidas Transformadas...</h2>
+            <div class="depoimentos" id="depoimentos">
+                <div class="depoimentos_item">
+                    <img src="imgs/depoimento1.jpg" alt="">
                 </div>
-                <button class="seta seta-direita" aria-label="Próximo">›</button>
+                <div class="depoimentos_item">
+                    <img src="imgs/depoimento2.jpg" alt="">
+                </div>
+                <div class="depoimentos_item">
+                    <img src="imgs/depoimento3.jpg" alt="">
+                </div>
             </div>
-        </section> -->
+            <div class="vermais_container">
+                <button id="toggleDepoimentos" class="btn-vermais">Ver Mais</button>
+            </div>
+        </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
