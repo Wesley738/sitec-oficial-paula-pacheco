@@ -498,7 +498,7 @@ a .btn-whatsapp:hover {
   outline: 1px solid var(--color-theme-main);
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
     #depoimentos {
         column-count: 2;
         column-gap: 1.2em;
