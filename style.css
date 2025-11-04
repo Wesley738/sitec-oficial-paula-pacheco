@@ -437,14 +437,7 @@ a .btn-whatsapp:hover {
 .depoimentos {
   column-count: 3;
   column-gap: 2em;
-  max-height: 500px; /* mostra só as duas primeiras linhas */
   overflow: hidden;
-  transition: max-height 0.6s ease;
-}
-
-
-.depoimentos.expandido {
-    max-height: 5000px; /* valor grande o suficiente pra mostrar tudo */
 }
 
 .depoimentos_item {
