@@ -511,3 +511,19 @@ a .btn-whatsapp:hover {
     }
 }
 
+.auxiliar-container {
+    position: relative;
+    z-index: 2;
+}
+
+.ebook-container {
+    position: relative;
+    left: 0; right: 0;
+    z-index: 3;
+    background-color: var(--color-theme-main);
+    width: 100vw;
+}
+
+.ebook-container img {
+    width: 430px;
+}
