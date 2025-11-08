@@ -511,19 +511,33 @@ a .btn-whatsapp:hover {
     }
 }
 
-.auxiliar-container {
-    position: relative;
-    z-index: 2;
-}
-
 .ebook-container {
-    position: relative;
-    left: 0; right: 0;
-    z-index: 3;
-    background-color: var(--color-theme-main);
-    width: 100vw;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 7rem;
 }
 
 .ebook-container img {
-    width: 430px;
+    width: 400px;
+    outline: 2px solid white;
+    outline-offset: -6px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.ebook-container img:hover {
+    transform: scale(1.01);
+}
+
+.container-texto__explicacao {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 0.2pt;
+}
+
+b {
+    font-weight: 600;
 }
