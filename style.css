@@ -307,7 +307,7 @@ a .btn-whatsapp:hover {
 }
 
 .subtitulo-principal {
-    font-size: 3.7em;
+    font-size: 2.1rem;
     text-align: center;
     font-weight: bold;
     color: var(--color-theme-main);
@@ -425,13 +425,6 @@ a .btn-whatsapp:hover {
   width: 70%;
   margin: 0 auto 4em;
   text-align: center;
-}
-
-.subtitulo-principal {
-  text-align: center;
-  font-size: 2.5em;
-  color: var(--color-theme-main);
-  margin-bottom: 2em;
 }
 
 .depoimentos {
@@ -603,4 +596,20 @@ b {
     .container-texto__explicacao {
         text-align: center;
     }
+}
+
+.container__perguntas-frequentes {
+    text-align: center;
+}
+
+.container__perguntas-frequentes_pergunta {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-theme-main);
+}
+
+.container__perguntas-frequentes_resposta {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--font-all-color);
 }
