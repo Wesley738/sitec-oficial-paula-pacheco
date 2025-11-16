@@ -3,16 +3,15 @@
     --color-theme-main: #853616;
 }
 
-html {
-    max-width: 100%;
-}
-
 body {
     /* overflow-x: hidden; */
     font-size: 62.5%;
     font-family: 'Raleway', sans-serif;
     font-weight: 400; /* peso padrão (regular) */
     color: var(--font-all-color);
+    margin: 0;
+    position: relative;
+    z-index: 0;
 }
 
 @media (max-width: 500px) {
@@ -38,6 +37,23 @@ body {
     padding: 0;
     flex-wrap: wrap;
     font-weight: 600;
+}
+
+nav {
+    padding-top: 1px;
+    height: 60px;
+    background-color: white;
+    position: sticky;
+    top: 0; left: 0;
+    z-index: 1;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 450px) {
+    nav {
+        position: static;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -69,12 +85,6 @@ body {
 
 .menu a:hover {
     border-bottom: 1px solid var(--color-theme-main);
-}
-
-#btn-destaque {
-    padding: 0.9em;
-    background-color: var(--color-theme-main);
-    color: white;
 }
 
 #btn-destaque:hover {
@@ -160,6 +170,7 @@ body {
     border: 8px double var(--color-theme-main);
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    margin-top: 10px;
 }
 
 .foto-doutora:hover {
@@ -425,7 +436,7 @@ a .btn-whatsapp:hover {
 }
 
 .depoimentos_container {
-  max-width: 64.6rem;
+  max-width: 49.6rem;
   margin: 0 auto 4em;
   text-align: center;
 }
@@ -601,18 +612,117 @@ b {
     }
 }
 
-.container__perguntas-frequentes {
+.container__perg-freq {
     text-align: center;
 }
 
-.container__perguntas-frequentes_pergunta {
-    font-size: 1.3rem;
+.container__perg-freq_perg {
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--color-theme-main);
 }
 
-.container__perguntas-frequentes_resposta {
-    font-size: 1.1rem;
+.container__perg-freq_resp {
+    font-size: 1rem;
     font-style: italic;
     color: var(--font-all-color);
+}
+
+@media (max-width: 450px) {
+    .container__perg-freq_perg {
+        font-size: 1.1rem;
+    }
+
+    .container__perg-freq_resp {
+        font-size: 0.9rem;
+    }
+}
+
+.footer {
+    background: var(--color-theme-main);
+    padding: 1.5em 1em 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.footer-logo-principal img {
+    width: 220px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social:hover {
+    opacity: 0.7;
+}
+
+.footer-social img {
+    width: 22px;
+}
+
+.footer-creditos {
+    font-size: 0.95rem;
+    color: white;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.footer-creditos p {
+    margin-top: 0;
+    margin-bottom: 1.4rem;
+    padding-bottom: 1px;
+}
+
+@media (max-width: 450px) {
+    .footer-creditos p {
+        font-size: 0.8rem;
+    }
+}
+
+.footer-criador {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.footer-criador a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-criador img {
+    width: 30px;
+}
+
+.footer-criador:hover {
+    opacity: 1;
 }
