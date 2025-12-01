@@ -558,7 +558,13 @@ a .btn-whatsapp:hover {
     margin-right: auto;
     display: flex;
     gap: 2.5rem;
-    margin-bottom: 7rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 450px) {
+    .ebook-container {
+        margin-bottom: 10px;
+    }
 }
 
 .ebook-container img {
