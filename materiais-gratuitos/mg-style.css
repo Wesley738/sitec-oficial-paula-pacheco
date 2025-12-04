@@ -1,13 +1,39 @@
+:root {
+    --font-all-color: #2b1c17;
+    --color-theme-main: #853616;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
     background: #f7f7f7;
     margin: 0;
-    padding: 20px;
+    font-size: 62.5%;
+    color: var(--color-theme-main);
+}
+
+header {
+    display: flex;
+    background-image: url(../imgs/background-mg.png);
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#autora {
+    width: 19rem;
+    margin-bottom: 0;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 3.6rem;
+    letter-spacing: -2pt;
+}
+
+#apresentacao {
+    font-size: 1rem;
 }
 
 .ebooks-container {

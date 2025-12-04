@@ -18,7 +18,7 @@ fetch(sheetUrl)
                 <img src="${image.trim()}" alt="${title}">
                 <h2>${title}</h2>
                 <p>${description}</p>
-                <a href="${pdf.trim()}" download>Baixar Ebook</a>
+                <a href="${pdf.trim()}" download target="_blank">Baixar Ebook</a>
             `;
 
             container.appendChild(ebookDiv);
