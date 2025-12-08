@@ -27,12 +27,18 @@
 </head>
 <body>
     <nav>
-        <ul class="menu">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu" id="menu">
             <li><a href="#">Início</a></li>
             <li><a href="#servicos">Meus Serviços</a></li>
             <li><a href="#depoimentos">Depoimentos</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="https://paulap.my.canva.site/materiais-gratuitos" target="_blank">Materiais Gratuitos</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
         </ul>
     </nav>
     <div class="container">
@@ -43,7 +49,7 @@
                 <p class="slogan">Clareza e acolhimento para transformar sua rotina e sua vida.</p>
                 <a href="https://wa.link/7oa7mt" class="btn-geral">Converse Comigo</a>
             </div>
-            <img src="imgs/foto-inicial.webp" alt="Foto da Doutora Paula Pacheco" class="foto-doutora">
+            <img src="imgs/foto-inicial.webp" alt="Foto da Doutora Paula Pacheco" class="foto-doutora" fetchpriority="high">
         </header>
     </div>
     <a href="https://wa.link/7oa7mt"><img src="imgs/btn-whatsapp.webp" alt="Botão para o WhatsApp" class="btn-whatsapp"></a>
@@ -137,9 +143,9 @@
                 </div>
             </div>
         </section>
-        <hr>
+        <hr id="sobre">
         <div class="container">
-            <section class="sobre ">
+            <section class="sobre">
                 <h2 class="subtitulo-principal">Um Pouco Sobre Mim</h2>
 
                 <div class="sobre-layout">
@@ -196,7 +202,6 @@ estratégias práticas para a vida real.</p>
             </section>
         </div>
     </main>
-    <!-- <script src="script.js"></script> -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo-principal">
@@ -215,7 +220,7 @@ estratégias práticas para a vida real.</p>
                     <span>paulapacheco.consultoria@gmail.com</span>
                 </a>
             </div>
-
+            
             <!-- Créditos -->
             <div class="footer-creditos">
                 <p>2025 Paula Pacheco. Todos os direitos reservados.</p>
@@ -227,5 +232,7 @@ estratégias práticas para a vida real.</p>
             </div>
         </div>
     </footer>
+    <button id="btn-topo" aria-label="Voltar ao topo">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>

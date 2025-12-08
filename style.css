@@ -52,10 +52,10 @@ hr {
 .btn-servico {
     text-align: center;
     width: 150px;
-    margin: auto;
+    margin: auto auto 0;
 }
 
-.menu {
+/* .menu {
     width: 95%;
     margin: 16px auto;
     display: flex;
@@ -87,10 +87,10 @@ nav {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .menu {
-        font-size: 1.4em;
-        gap: 1.5em;
+        font-size: 1.3em;
+        gap: 2.6em;
     }
 }
 
@@ -137,6 +137,111 @@ nav {
 
 .menu a:hover::after {
     width: 80%;
+} */
+
+
+nav {
+    padding: 0 20px;
+    height: 50px;
+    background-color: white;
+    position: sticky;
+    top: 0; left: 0;
+    z-index: 3;
+    width: 50%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* menu padrão (desktop) */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-theme-main);
+    padding: 3px 6px;
+    transition: 0.2s ease;
+    margin-left: 17px;
+}
+
+.menu a:hover {
+    border-bottom: 1px solid var(--color-theme-main);
+}
+
+/* ----- HAMBURGER BUTTON ----- */
+.hamburger {
+    width: 30px;
+    height: 22px;
+    display: none; /* aparece só no mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background: var(--color-theme-main);
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+/* animação do hambúrguer -> X */
+.hamburger.ativo span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.ativo span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.ativo span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ----- MOBILE ----- */
+@media (max-width: 420px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 60px;
+        z-index: 2;
+        right: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        gap: 1.6em;
+        padding: 0 0 10px;
+
+        /* escondido inicialmente */
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: 0.3s ease;
+        align-items: start;
+    }
+
+    /* quando abrir */
+    .menu.aberto {
+        height: auto;
+        opacity: 1;
+    }
 }
 
 .cabecalho-principal {
@@ -192,7 +297,7 @@ nav {
 }
 
 .slogan {
-    font-size: 2.5em;
+    font-size: 2.1em;
     width: 80%;
     text-align: center;
     font-style: italic;
@@ -204,8 +309,13 @@ nav {
     }
 
     .slogan {
-        font-size: 1.7em;
-        width: 70%;
+        font-size: 1.5em;
+        width: 75%;
+    }
+
+    .btn-inicio {
+        font-size: 0.8rem;
+        padding: 0.6em 2em;
     }
 }
 
@@ -247,6 +357,7 @@ nav {
     width: 60px;
     position: fixed;
     bottom: 15px; right: 20px;
+    z-index: 2;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
@@ -500,6 +611,8 @@ a .btn-whatsapp:hover {
 }
 
 .sobre-layout {
+    position: relative;
+    z-index: 0;
     display: flex;
     align-items: center;
     gap: 4em;
@@ -512,6 +625,7 @@ a .btn-whatsapp:hover {
     position: relative;
     flex: 1 1 350px;
     margin-bottom: 1rem;
+    z-index: 0;
 }
 
 .foto-principal {
@@ -744,4 +858,34 @@ b {
 
 .footer-criador:hover {
     opacity: 1;
+}
+
+#btn-topo {
+    position: fixed;
+    bottom: 86px;
+    right: 25px;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    background: var(--color-theme-main);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    /* escondido inicialmente */
+    opacity: 0;
+    pointer-events: none;
+
+    /* transições suaves */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#btn-topo:hover {
+    transform: translateY(-3px);
 }
