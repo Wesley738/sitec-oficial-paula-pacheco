@@ -20,10 +20,12 @@ btnTopo.addEventListener("click", () => {
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
 const nav = document.querySelector("nav");
+const overlay = document.getElementById("menu-overlay");
 
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("ativo");
-    menu.classList.toggle("aberto");
+    const ativo = hamburger.classList.toggle("ativo");
+    menu.classList.toggle("aberto", ativo);
+    overlay.classList.toggle("ativo", ativo);
 });
 
 // Fecha ao clicar em qualquer link
@@ -33,16 +35,11 @@ document.querySelectorAll(".menu a").forEach(link => {
     });
 });
 
-// Fecha ao clicar fora do nav
-document.addEventListener("click", (e) => {
-    const clicouFora = !nav.contains(e.target);
-
-    if (clicouFora && menu.classList.contains("aberto")) {
-        fecharMenu();
-    }
-});
+// Fecha ao clicar fora do menu (no overlay)
+overlay.addEventListener("click", fecharMenu);
 
 function fecharMenu() {
     menu.classList.remove("aberto");
     hamburger.classList.remove("ativo");
+    overlay.classList.remove("ativo");
 }

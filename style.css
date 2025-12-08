@@ -141,50 +141,76 @@ nav {
 
 
 nav {
-    padding: 0 20px;
-    height: 50px;
+    padding: 1px 0 0 20px;
+    height: 60px;
     background-color: white;
     position: sticky;
-    top: 0; left: 0;
-    z-index: 3;
-    width: 50%;
-
+    top: 0; right: 0;
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 /* menu padrão (desktop) */
 .menu {
+    width: 95%;
+    margin: 16px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 3.4em;
     list-style: none;
-    margin: 0;
+    font-size: 1.5em;
     padding: 0;
+    flex-wrap: wrap;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    font-size: 0.8rem;
 }
 
 .menu a {
     text-decoration: none;
     color: var(--color-theme-main);
-    padding: 3px 6px;
-    transition: 0.2s ease;
-    margin-left: 17px;
+    letter-spacing: 1px;
+    padding: 2px 2px 6px;
+    cursor: pointer;
 }
 
-.menu a:hover {
-    border-bottom: 1px solid var(--color-theme-main);
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-theme-main);
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 1px;
+    width: 0;
+    background: var(--color-theme-main);
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.menu a:hover::after {
+    width: 80%;
+}
+
+.menu.aberto {
+    transform: translateX(0);
 }
 
 /* ----- HAMBURGER BUTTON ----- */
 .hamburger {
     width: 30px;
     height: 22px;
-    display: none; /* aparece só no mobile */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
@@ -218,30 +244,71 @@ nav {
         display: flex;
     }
 
+    /* transforma menu em lateral mobile */
     .menu {
-        position: absolute;
-        top: 60px;
-        z-index: 2;
-        right: 0;
-        width: 100%;
-        background: white;
         flex-direction: column;
-        gap: 1.6em;
-        padding: 0 0 10px;
-
-        /* escondido inicialmente */
-        height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: 0.3s ease;
-        align-items: start;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        padding: 6em 0 3em;
+        gap: 2em;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 5;
     }
 
-    /* quando abrir */
+    /* menu aberto */
     .menu.aberto {
-        height: auto;
-        opacity: 1;
+        transform: translateX(0);
     }
+
+    /* overlay */
+    #menu-overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.45);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 4;
+    }
+
+    #menu-overlay.ativo {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+/* Fundo escuro com blur */
+#menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 4; /* abaixo do menu móvel */
+}
+
+/* Quando o menu está aberto */
+#menu-overlay.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Para garantir que o hamburger fique acima */
+#hamburger {
+    z-index: 6;
 }
 
 .cabecalho-principal {
@@ -862,11 +929,11 @@ b {
 
 #btn-topo {
     position: fixed;
-    bottom: 86px;
+    bottom: 70px;
     right: 25px;
     z-index: 3;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: var(--color-theme-main);
     color: white;
     border: none;
